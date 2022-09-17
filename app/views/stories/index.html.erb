@@ -1,8 +1,10 @@
-<div class="m-4">
-  <div class="flex space-x-6 justify-center">
+<div class="mt-8">
+  <div class="flex space-x-8 justify-center">
     <% @stories.each do |story| %>
-      <div class="flex items-stretch w-1/4">
-        <%= render "card", story: story %>
+      <div class="flex items-stretch w-1/5">
+        <% if story.published == true %>
+          <%= render "card", story: story %>
+        <% end %>
       </div>
     <% end %>
   </div>

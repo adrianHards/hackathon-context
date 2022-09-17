@@ -21,7 +21,7 @@ story.english =
 "She now can do tricks,", "like jumps and skating off rails!", "Her friends have nicknamed her 'Ruby on Rails'."]
 
 story.spanish = {
-  "When Daddy Rabbit suggests going to the skate park," => "Cuando papá Conejo sugiere ir al parque de patinaje,",
+  "When Daddy Rabbit suggests going to the skate park," => "Cuando Papá Conejo sugiere ir al parque de patinaje,",
   "Ruby's big brother is excited," => "el hermano mayor de Ruby se emociona,",
   "but little Ruby is nervous." => "Pero la pequeña Ruby está nerviosa.",
   "What if she falls over and everyone laughs at her?" => "¿Y si se cae y todos se ríen de ella?",
@@ -51,7 +51,7 @@ story = Story.new(
   published: false,
   name: 'Ruby learns Hotwire',
   photo: 'rabbit-read.jpg',
-  summary: "Ruby decides to enter a themed hackathon despite having very little experience with Hotwire. Will she be able to make something in time?!"
+  summary: "Ruby decides to enter a Hotwire themed hackathon despite knowing little about it. Will she be able to make something in time?!"
 )
 
 story.save!
@@ -71,9 +71,21 @@ story = Story.new(
   published: false,
   name: 'Ruby in the cloud!',
   photo: 'rabbit-float.jpg',
-  summary: "Ruby needs to find an alternative to Heroku fast, but she's flummoxed by all the alternatives. Which will she pick?!"
+  summary: "Ruby needs to find an alternative to Heroku fast, but she's flummoxed by all these alternatives. Which will she pick?!"
 )
 
 story.save!
 
 puts "there are #{Story.count} stories, only #{Story.where(published: true).count} is published"
+
+# english = "When Daddy Rabbit suggests going to the skate park, Ruby's big brother is excited. But little Ruby is nervous. What if she falls over and everyone laughs at her?
+# The family arrive at the park and Ruby's brother takes off. He zooms past Ruby, at turbo speed. That makes Ruby even more nervous! Daddy rabbit gives Ruby a gentle nudge of encouragement. Daddy Rabbit says, “if you don't try, you'll never know”.
+# Sensing Ruby's uncertainty, Daddy Rabbit holds Ruby's hand and they take the first step together. Ruby slips a little but Daddy Rabbit catches her, and she tries again.
+# Ruby is a natural! Ruby falls in love with skating and practices every day for months. She now can do tricks, like jumps and skating off rails! Her friends have nicknamed her 'Ruby on Rails'."
+
+# story.english =
+# ["When Daddy Rabbit suggests going to the skate park,", "Ruby's big brother is excited,", "but little Ruby is nervous.", "What if she falls over and everyone laughs at her?",
+# "The family arrive at the park and Ruby's brother takes off.", "He zooms past Ruby,", "at turbo speed.", "That makes Ruby even more nervous.", "Daddy Rabbit gives Ruby a gentle nudge of encouragement.",
+# "Daddy Rabbit says,", "'if you don't try, you'll never know'.", "Sensing Ruby's uncertainty,", "Daddy Rabbit holds Ruby's hand and they take the first step together.",
+# "Ruby slips a little but Daddy Rabbit catches her,", "and she tries again.", "Ruby is a natural!", "Ruby falls in love with skating and practices every day for months.",
+# "She now can do tricks,", "like jumps and skating off rails!", "Her friends have nicknamed her 'Ruby on Rails'."]
