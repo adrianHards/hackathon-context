@@ -10,15 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_17_132223) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_17_132149) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
   enable_extension "plpgsql"
-
-  create_table "libraries", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "stories", force: :cascade do |t|
     t.string "name"
@@ -27,9 +22,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_17_132223) do
     t.hstore "french"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "library_id", null: false
-    t.index ["library_id"], name: "index_stories_on_library_id"
   end
 
-  add_foreign_key "stories", "libraries"
 end
