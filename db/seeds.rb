@@ -8,7 +8,9 @@ puts "there are #{Story.count} stories"
 puts "creating 'Ruby on Rails' story"
 story = Story.new(
   published: true,
-  name: 'Ruby on Rails!'
+  name: 'Ruby on Rails!',
+  photo: 'rabbit-ruby.jpg',
+  summary: "Ruby's at it again! Today, she's off to the skate park. But does Ruby have what it takes to overcome her fears? Lets find out!"
 )
 
 story.english =
@@ -42,4 +44,36 @@ story.spanish = {
 
 story.save!
 
-puts "there are #{Story.count} stories"
+puts "creating 3 additional unpublished stories"
+
+puts "creating 'Ruby learns Hotwire' story"
+story = Story.new(
+  published: false,
+  name: 'Ruby learns Hotwire',
+  photo: 'rabbit-read.jpg',
+  summary: "Ruby decides to enter a themed hackathon despite having very little experience with Hotwire. Will she be able to make something in time?!"
+)
+
+story.save!
+
+puts "creating 'Ruby needs a hug!' story"
+story = Story.new(
+  published: false,
+  name: 'Ruby needs a hug',
+  photo: 'rabbit-hug.jpg',
+  summary: "Ruby's laptop is broken! It's returning all sorts of crazy errors stopping her from doing any work, what will she do!?"
+)
+
+story.save!
+
+puts "creating 'Ruby in the cloud!' story"
+story = Story.new(
+  published: false,
+  name: 'Ruby in the cloud!',
+  photo: 'rabbit-float.jpg',
+  summary: "Ruby needs to find an alternative to Heroku fast, but she's flummoxed by all the alternatives. Which will she pick?!"
+)
+
+story.save!
+
+puts "there are #{Story.count} stories, only #{Story.where(published: true).count} is published"
