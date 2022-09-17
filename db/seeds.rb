@@ -43,14 +43,3 @@ story.spanish = {
 story.save!
 
 puts "there are #{Story.count} stories"
-
-# puts "English"
-# story.translation.each do |key, value|
-#   puts "#{key}"
-# end
-
-# puts "Spanish"
-
-# story.translation.each do |key, value|
-#   puts "#{value}"
-# end
