@@ -5,6 +5,8 @@ class CreateStories < ActiveRecord::Migration[7.0]
       t.boolean :published
       t.hstore :spanish
       t.hstore :french
+      t.string :difficulty
+      t.string :language
 
       t.timestamps
     end
