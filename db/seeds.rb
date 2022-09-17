@@ -4,13 +4,20 @@ puts "destroying all stories"
 Story.destroy_all
 puts "there are #{Story.count} stories"
 
+
+puts "creating a new library"
+library = Library.create
+
 # seed our demo story
 puts "creating 'Ruby on Rails' story"
 story = Story.new(
-  language: 'Spanish'
+  library: library
+  published: true,
+  name: 'Ruby on Rails!'
 )
 
-story.translation = {
+
+story.spanish = {
   "When Daddy Rabbit suggests going to the skate park," => "Cuando papá Conejo sugiere ir al parque de patinaje,",
   "Ruby's big brother is excited" => "el hermano mayor de Ruby se emociona",
   "But little Ruby is nervous." => "Pero la pequeña Ruby está nerviosa.",
