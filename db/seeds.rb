@@ -32,6 +32,10 @@ story.translation = {
   "Her friends have nicknamed her 'Ruby on Rails'." => "Sus amigos la han apodado 'Ruby on Rails'."
 }
 
+story.save!
+
+puts "there are #{Story.count} stories"
+
 # puts "English"
 # story.translation.each do |key, value|
 #   puts "#{key}"
