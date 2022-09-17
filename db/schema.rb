@@ -22,6 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_17_132149) do
     t.hstore "french"
     t.string "difficulty"
     t.string "language"
+    t.string "english", array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
