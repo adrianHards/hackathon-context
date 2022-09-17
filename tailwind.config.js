@@ -13,6 +13,7 @@ module.exports = {
       'teal': '#75FFE6',
       'light-teal': '#DEFFF9',
       'pink': '#FB3DBB',
+      'light-pink':'#FF6DCE',
       'grey-font': '#ACACAC',
       'orange': '#FFB800',
     },
