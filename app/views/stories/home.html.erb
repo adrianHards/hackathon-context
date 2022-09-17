@@ -1,8 +1,8 @@
 <%= render "stories/shared/navbar" %>
 
-<div class='hero max-h-40'>
+<div class='hero '>
   <div class='m-auto flex mt-2'>
-    <div class='basis-2/5 content-center bg-light-blue p-2 mr-2 rounded-3xl	'>
+    <div class='basis-2/5 content-center bg-light-blue p-2 mr-2 rounded-3xl'>
       <h3 class='text-[#ACACAC]'>Learn languages through</h3>
       <%= image_tag "context-logo-blue.png", class:'w-60 ' %>
       <h3 class='text-black'>For children aged 5 to 7 who are learning to read and speak two languages</h3>
@@ -10,6 +10,24 @@
     </div>
     <div class='basis-3/5'>
       <%= image_tag "hero.jpg" %>
+    </div>
+  </div>
+</div>
+
+<div class='how-it-works xl:container m-auto'>
+  <h1>How it works</h1>
+  <div class='flex'>
+    <div>
+      <%= image_tag "orange-blob.png", class:'w-50 ' %>
+      <h2>1. Browse the library of childrens books</h2>
+    </div>
+    <div>
+      <%= image_tag "blue-blob.png", class:'w-50 ' %>
+      <h2>2. Select the language and difficulty</h2>
+    </div>
+    <div>
+      <%= image_tag "pink-blob.png", class:'w-50 ' %>
+      <h2>3. Read along and click on sentences to see the translation</h2>
     </div>
   </div>
 </div>
