@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Proxima Nova, system-ui, sans-serif;
+
+  }
+}
+
+@layer components {
+  .button {
+    background-color: theme('colors.pink');
+    padding: 8px 18px;
+    border-bottom: theme('colors.orange') solid 4px;
+  }
+  .button:hover{
+    background-color: theme('colors.light-pink');
+  }
+  /* ... */
+}
