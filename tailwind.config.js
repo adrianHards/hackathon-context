@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     colors: {
+      'black':'#383838',
       'blue': '#38CFFF',
       'light-blue': '#E5F9FF',
       'teal': '#75FFE6',
@@ -15,5 +16,13 @@ module.exports = {
       'grey-font': '#ACACAC',
       'orange': '#FFB800',
     },
+  },
+  screens: {
+    'tablet': '640px',
+    // => @media (min-width: 640px) { ... }
+    'laptop': '1024px',
+    // => @media (min-width: 1024px) { ... }
+    'desktop': {'max': '1280px'},
+    // => @media (min-width: 1280px) { ... }
   }
 }
