@@ -1,1 +1,43 @@
-<p>Index Page</p>
+<h1>Browse Library</h1>
+
+<div class="flex space-x-3 justify-center">
+  <div class="card max-h-30">
+    <div class="max-w-xs rounded overflow-hidden shadow-lg">
+      <img class="object-scale-down w-30 h-30" src="https://i.thenile.io/r1000/9781474956543.jpg?r=5f1524fb81ad6" alt="">
+      <div class="px-6 py-4">
+        <% @stories.each do |story| %>
+        <h5 class="font-bold text-xl mb-2"><%= story.name %></h5>
+        <p class="text-gray-700 text-base">
+          Some quick example text to build on the card title and make up the bulk of the card's
+          content.
+        </p>
+        <% end %>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">3-5 years old</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card max-h-30">
+    <div class="max-w-xs rounded overflow-hidden shadow-lg">
+      <img class="w-full w-30" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F1.bp.blogspot.com%2F-kwTpJnKCuVw%2FVkDKn99eWGI%2FAAAAAAAASQ8%2FZsQeeVRpXms%2Fs1600%2FThe%252BLittle%252BMermaid%252BHD%252BWallpapers3.jpg&f=1&nofb=1" alt="Sunset in the mountains">
+      <div class="px-6 py-4">
+        <% @stories.each do |story| %>
+        <h5 class="font-bold text-xl mb-2">Little Mermaid</h5>
+        <p class="text-gray-700 text-base">
+          Some quick example text to build on the card title and make up the bulk of the card's
+          content.
+        </p>
+        <% end %>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">3-5 years old</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+      </div>
+    </div>
+  </div>
+</div>
