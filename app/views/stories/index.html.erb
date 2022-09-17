@@ -1,1 +1,7 @@
-<p>Index Page</p>
+<h1>Browse Library</h1>
+
+<div class="stories-card">
+  <% @stories.each do |story| %>
+    <%= story.name %>
+  <% end %>
+</div>
