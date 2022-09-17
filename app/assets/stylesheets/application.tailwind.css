@@ -5,7 +5,18 @@
 @layer base {
   html {
     font-family: Proxima Nova, system-ui, sans-serif;
-
+  }
+  h1{
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+  h2{
+    font-size: 28px;
+    letter-spacing: -1px;
+  }
+  h3{
+    font-size: 22px;
+    letter-spacing: -1px;
   }
 }
 
@@ -19,4 +30,5 @@
     background-color: theme('colors.light-pink');
   }
   /* ... */
+
 }
