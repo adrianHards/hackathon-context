@@ -1,7 +1,13 @@
-<div class="rounded-lg shadow-lg">
+<div class="rounded-lg shadow hover:shadow-lg">
 
   <div>
-    <%= image_tag "#{story.photo}", class: "rounded-t-lg" %>
+    <% if story.published  %>
+      <%= link_to "stories/#{story.id}" do %>
+        <%= image_tag "#{story.photo}", class: "rounded-t-lg" %>
+      <% end %>
+    <% else %>
+      <%= image_tag "#{story.photo}", class: "rounded-t-lg brightness-75" %>
+    <% end %>
   </div>
 
     <h5 class="p-4 font-bold text-xl">
