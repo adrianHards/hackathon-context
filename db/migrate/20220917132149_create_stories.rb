@@ -8,6 +8,8 @@ class CreateStories < ActiveRecord::Migration[7.0]
       t.string :difficulty
       t.string :language
       t.string :english, array: true
+      t.string :photo
+      t.text :summary
 
       t.timestamps
     end

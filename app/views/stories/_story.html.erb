@@ -1,13 +1,15 @@
-<% i = 0 %>
-<% while i < @story.english.count %>
-  <% if rand(2) == rand(2) %>
-    <span class="text-rose-700">
-      <%= @story.spanish[@story.english[i]] %>
-    </span>
-  <% else %>
-    <span>
-      <%= @story.english[i] %>
-    </span>
+<% if @story.published == true %>
+  <% i = 0 %>
+  <% while i < @story.english.count %>
+    <% if rand(2) == rand(2) %>
+      <span class="text-pink">
+        <%= @story.spanish[@story.english[i]] %>
+      </span>
+    <% else %>
+      <span>
+        <%= @story.english[i] %>
+      </span>
+    <% end %>
+    <% i += 1 %>
   <% end %>
-  <% i += 1 %>
 <% end %>
