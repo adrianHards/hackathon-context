@@ -19,7 +19,10 @@
     letter-spacing: -1px;
   }
   body{
-    min-height: 100vh !important;
+    /* min-height: 100vh !important;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -1%; */
   }
 }
 

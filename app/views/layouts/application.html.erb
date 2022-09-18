@@ -8,11 +8,15 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%# <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" /> %>
   </head>
 
-  <body>
-    <%= render "stories/shared/navbar" %>
-    <%= yield %>
-    <%= render "stories/shared/footer" %>
+  <body class="min-h-screen justify-between flex-col">
+    <%= render "stories/shared/navbar", class: "shrink-0" %>
+    <div class="main flex-1">
+      <%= yield %>
+    </div>
+    <%= render "stories/shared/footer", class: "shrink-0" %>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
   </body>
 </html>

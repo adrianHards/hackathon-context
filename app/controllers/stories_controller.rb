@@ -11,6 +11,9 @@ class StoriesController < ApplicationController
   def show
   end
 
+  def next
+  end
+
   private
 
   def set_story
