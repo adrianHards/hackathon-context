@@ -2,9 +2,9 @@
     <% @story.sentences.each do |sentence| %>
       <%= turbo_frame_tag sentence do %>
         <%= link_to story_sentence_path(@story, sentence) do %>
-          <span class="text-pink border-2 border-blue rounded-lg">
-            <%= render "sentences/spanish", sentence: sentence.spanish %>
-          <% end %>
+          <span data-controller="check" class="text-pink border-2 border-blue rounded-lg">
+            <span data-action="click->check#show"><%= render "sentences/spanish", sentence: sentence.spanish %></span>
+        <% end %>
           </span>
       <% end %>
     <% end %>

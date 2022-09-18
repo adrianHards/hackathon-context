@@ -4,8 +4,8 @@
 
 import { application } from "./application"
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+import CheckController from "./check_controller"
+application.register("check", CheckController)
 
 import SentenceLoadingController from "./sentence_loading_controller"
 application.register("sentence-loading", SentenceLoadingController)
