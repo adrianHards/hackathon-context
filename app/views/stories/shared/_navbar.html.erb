@@ -1,7 +1,12 @@
-<div class="bg-blue py-2.5">
+<div class="bg-blue border-t-8 border-teal py-2.5 flex justify-between items-center">
   <div class="ml-6">
     <%= link_to "/" do %>
       <%= image_tag "context-logo-white.png", class:"w-12 "  %>
     <% end %>
+  </div>
+  <div class="nav-links">
+    <%= link_to "Library", stories_path, class: "text-white" %>
+    <span class="text-white"> | </span>
+    <%= link_to "Settings", stories_path, class: "text-white" %>
   </div>
 </div>
