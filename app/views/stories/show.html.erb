@@ -17,8 +17,8 @@
             </div>
           </div>
         </div>
-        <div class='mt-12 flex justify-end'>
-          <%= link_to "Next",story_next_path(@story), class:"button bg-teal" %>
+        <div data-controller="check" class='mt-12 flex justify-end'>
+          <span data-action="click->check#reset"><%= link_to "Next",story_next_path(@story), class:"button bg-teal"%></span>
         </div>
       <% end %>
     </div>
