@@ -22,7 +22,7 @@ export default class extends Controller {
         arrayNodes[i].classList.add("transition-colors");
         arrayNodes[i].classList.add("duration-700");
         arrayNodes[i].classList.add("ease-in");
-        arrayNodes[i].classList.add("decoration-pink");
+        arrayNodes[i].classList.add("decoration-blue");
       }, 300 * i);
     }
   }
