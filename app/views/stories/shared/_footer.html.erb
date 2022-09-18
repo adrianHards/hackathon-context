@@ -1,0 +1,15 @@
+<div class="bg-blue border-b-8 border-teal py-2.5 py-10 mt-12">
+  <div class="xl:container flex justify-between items-center m-auto">
+    <div class="ml-6">
+      <%= link_to "/" do %>
+        <%= image_tag "context-full-logo-white.png", class:"w-60 "  %>
+      <% end %>
+    </div>
+    <div class="nav-links flex flex-col">
+      <%= link_to "About", "#", class: "text-white text-right" %>
+      <%= link_to "Contact", "#", class: "text-white text-right" %>
+      <%= link_to "Library", stories_path, class: "text-white text-right" %>
+      <%= link_to "Request a Book", "#", class: "text-white text-right" %>
+    </div>
+  </div>
+</div>

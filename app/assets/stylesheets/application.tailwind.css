@@ -23,8 +23,9 @@
 @layer components {
   .button {
     background-color: theme('colors.pink');
-    padding: 8px 18px;
+    padding: 10px 30px;
     border-bottom: theme('colors.orange') solid 4px;
+    font-size: 20px;
   }
   .button:hover{
     background-color: theme('colors.light-pink');

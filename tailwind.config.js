@@ -18,13 +18,18 @@ module.exports = {
       'orange': '#FFB800',
       'white': '#FFF',
     },
+    extend: {
+      backgroundImage: {
+          'hero': "url('hero.jpeg')"
+      }
+    }
   },
   screens: {
     'tablet': '640px',
     // => @media (min-width: 640px) { ... }
     'laptop': '1024px',
     // => @media (min-width: 1024px) { ... }
-    'desktop': {'max': '1280px'},
+    'desktop': '1280px',
     // => @media (min-width: 1280px) { ... }
   }
 }
