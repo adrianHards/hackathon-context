@@ -12,7 +12,9 @@
             <p><strong>Correct answers:</strong> <span id="counter">0</span><span id="total">/0</span></p>
             <div class="relative" data-controller="check" id="marker" hidden>
               <div class="pop-up shadow-lg border-blue rounded-lg">
-                <div class='content-center'><p class='text-[28px] pl-1 pt-2'>Did you translate it correctly?</p></div>
+                <div class='content-center'>
+                  <p class='text-[28px] pl-1 pt-2'>Did you translate it correctly?</p>
+                </div>
                 <div>
                   <button id="correct" data-action="click->check#correct"><%= image_tag "published.png", class:'w-10'%></button>
                   <button id="wrong" data-action="click->check#wrong"><%= image_tag "unpublished.png", class:'w-10' %></button>
