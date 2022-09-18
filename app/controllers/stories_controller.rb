@@ -11,10 +11,16 @@ class StoriesController < ApplicationController
   def show
   end
 
+  def next
+  end
+
   private
 
   def set_story
     @story = Story.find(params[:id])
+  end
+
+  def set_page
   end
 
 end
