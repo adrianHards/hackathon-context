@@ -1,12 +1,12 @@
 <% if @story.published == true %>
 
-  <% @story.sentences.first(10).each do |sentence| %>
+  <% @story.sentences.last(9).each do |sentence| %>
 
     <% if rand(4) == rand(4) %>
       <%= turbo_frame_tag sentence do %>
         <%= link_to story_sentence_path(@story, sentence) do %>
-          <span data-controller="check" class="text-pink bg-teal rounded-lg">
-            <span class="sentence rounded-lg text-white" data-action="click->check#show"><%= render "sentences/sentence", sentence: sentence.spanish %></span>
+          <span data-controller="check" class="text-pink border-2 border-blue rounded-lg">
+            <span class="sentence rounded-lg text-white underline" data-action="click->check#show"><%= render "sentences/sentence", sentence: sentence.spanish %></span>
         <% end %>
 
           </span>
