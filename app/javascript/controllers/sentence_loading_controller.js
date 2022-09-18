@@ -4,6 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
 
   connect() {
+    console.log('hello')
     const listNodes = document.querySelectorAll('.sentence')
     const arrayNodes = [...listNodes];
     arrayNodes.reverse

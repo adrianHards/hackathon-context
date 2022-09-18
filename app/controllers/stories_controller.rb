@@ -9,9 +9,6 @@ class StoriesController < ApplicationController
   end
 
   def show
-    @page = params.fetch(:page,0).to_i
-    @sentences = Sentence.all
-    @pageSentences = Sentence.offset(@page*2).limit(2)
   end
 
   def next
@@ -21,9 +18,6 @@ class StoriesController < ApplicationController
 
   def set_story
     @story = Story.find(params[:id])
-  end
-
-  def set_page
   end
 
 end
