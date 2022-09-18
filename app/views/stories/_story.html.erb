@@ -1,15 +1,11 @@
 <% if @story.published == true %>
-  <% i = 0 %>
-  <% while i < @story.english.count %>
-    <% if rand(2) == rand(2) %>
-      <span class="text-pink">
-        <%= @story.spanish[@story.english[i]] %>
-      </span>
-    <% else %>
-      <span>
-        <%= @story.english[i] %>
-      </span>
+    <% @story.sentences.each do |sentence| %>
+      <%= turbo_frame_tag sentence do %>
+        <%= link_to story_sentence_path(@story, sentence) do %>
+          <span class="text-pink border-2 border-blue rounded-lg">
+            <%= render "sentences/spanish", sentence: sentence.spanish %>
+          <% end %>
+          </span>
+      <% end %>
     <% end %>
-    <% i += 1 %>
-  <% end %>
 <% end %>
