@@ -4,12 +4,10 @@
     <div class="rounded-lg shadow hover:shadow-lg">
 
       <div class="relative">
-        <% if story.published != true %>
-          <%= image_tag "#{story.photo}", class: "rounded-t-lg brightness-75" %>
-        <% else %>
-          <%= image_tag "#{story.photo}", class: "rounded-t-lg" %>
-        <% end %>
-
+        <%= image_tag "#{story.photo}", class: "rounded-t-lg" %>
+        <div class="absolute bottom-0 px-4 py-2 bg-gray-800 opacity-70">
+          <h3 class="text-xl text-pink font-bold">Let's Read!</h3>
+        </div>
       </div>
 
       <h5 class="p-4 font-bold text-xl">
@@ -30,13 +28,13 @@
     <div class="rounded-lg shadow hover:shadow-lg">
 
       <div class="relative">
-        <% if story.published != true %>
-          <%= image_tag "#{story.photo}", class: "rounded-t-lg brightness-50" %>
-        <% else %>
-          <%= image_tag "#{story.photo}", class: "rounded-t-lg" %>
-        <% end %>
-
+        <%= image_tag "#{story.photo}", class: "rounded-t-lg brightness-75" %>
+        <div class="absolute bottom-0 px-4 py-2 opacity-70">
+          <h3 class="text-xl text-teal font-bold">Coming Soon!</h3>
+        </div>
       </div>
+
+
 
       <h5 class="p-4 font-bold text-xl">
         <%= story.name %>
