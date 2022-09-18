@@ -1,13 +1,11 @@
 <% if @story.published == true %>
-
     <% @story.sentences.each do |sentence| %>
       <%= turbo_frame_tag sentence do %>
         <%= link_to story_sentence_path(@story, sentence) do %>
-          <%= render "sentences/spanish", sentence: sentence.spanish %>
-        <% end %>
+          <span class="text-pink border-2 border-blue rounded-lg">
+            <%= render "sentences/spanish", sentence: sentence.spanish %>
+          <% end %>
+          </span>
       <% end %>
     <% end %>
-
 <% end %>
-
-
