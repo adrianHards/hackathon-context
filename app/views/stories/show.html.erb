@@ -17,12 +17,19 @@
             </div>
           </div>
         </div>
-        <div class='mt-12 flex justify-end'>
-          <%= link_to "Next",story_next_path(@story), class:"button" %>
+        <div data-controller="check" class='mt-12 flex justify-end'>
+          <span data-action="click->check#reset"><%= link_to "Next",story_next_path(@story), class:"button bg-teal"%></span>
         </div>
       <% end %>
     </div>
   </div>
+</div>
+
+<div class="w-9/12 m-auto mt-6 bg-light-teal p-6">
+  <h3 class='mb-2'>Need help?</h3>
+  <p>1. Read along with your child. Some of the English text will be randomly translated to Spanish. <p>
+  <p>2. If your child translates the phrase to Spanish correctly, select the tick that pops-up. </p>
+  <p>3. The score will be recorded. Read again or choose another book from the library. </p>
 </div>
 
 <!--<div id="default-carousel" class="h-[500px] relative w-8/12 m-auto border-blue border-2 rounded-lg bg-white shadow-lg mt-12" data-carousel="static">

@@ -5,11 +5,10 @@ var markers_counter = 0
 export default class extends Controller {
   connect() {
     console.log("Hello, Stimulus!", this.element)
-    const tbf = document.querySelectorAll("turbo-frame").length
-    console.log(tbf)
+    const tbf = document.querySelectorAll("turbo-frame")
+    const tbf_length = tbf.length
     const el = document.querySelector("#total")
-    console.log(el)
-    el.innerHTML = "/" + tbf
+    el.innerHTML = "/" + (tbf_length-1)
   }
 
   show() {
@@ -37,5 +36,9 @@ export default class extends Controller {
     marker.forEach((el) => {
       el.hidden = true
     });
+  }
+
+  reset() {
+    markers_counter = 0
   }
 }
