@@ -5,10 +5,15 @@
     <%= render "second", story: @story %>
     <div class="markers_container flex justify-between mt-6">
       <p><strong>Correct answers:</strong> <span id="counter">0</span><span id="total">/0</span></p>
-      <div data-controller="check" id="marker" hidden>
-        <button id="correct" data-action="click->check#correct"><%= image_tag "published.png", class:'w-5'%></button>
-        <button id="wrong" data-action="click->check#wrong"><%= image_tag "unpublished.png", class:'w-5' %></button>
-      </div>
+      <div class="relative" data-controller="check" id="marker" hidden>
+              <div class="pop-up shadow-lg border-blue rounded-lg">
+                <div><p class='text-[28px] pt-2 pl-1 '>Did you translate it correctly?</p></div>
+                <div>
+                  <button id="correct" data-action="click->check#correct"><%= image_tag "published.png", class:'w-10'%></button>
+                  <button id="wrong" data-action="click->check#wrong"><%= image_tag "unpublished.png", class:'w-10' %></button>
+                </div>
+              </div>
+            </div>
     </div>
   </div>
 
