@@ -20,8 +20,10 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-          'hero': "url('hero.jpeg')"
+          'hero': "url('hero.jpeg')",
+          'ruby-rails': "url('rabbit-ruby.jpg')",
       }
+
     }
   },
   screens: {

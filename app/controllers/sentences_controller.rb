@@ -5,5 +5,3 @@ class SentencesController < ApplicationController
   end
 
 end
-
-
