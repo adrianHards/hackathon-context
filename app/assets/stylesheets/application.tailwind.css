@@ -18,6 +18,9 @@
     font-size: 22px;
     letter-spacing: -1px;
   }
+  body{
+    min-height: 100vh !important;
+  }
 }
 
 @layer components {
