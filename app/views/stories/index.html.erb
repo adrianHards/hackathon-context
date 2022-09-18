@@ -1,1 +1,9 @@
-<p>Index Page</p>
+<div class="mt-8">
+  <div class="flex space-x-8 justify-center">
+    <% @stories.each do |story| %>
+      <div class="flex items-stretch w-1/5">
+        <%= render "card", story: story %>
+      </div>
+    <% end %>
+  </div>
+</div>

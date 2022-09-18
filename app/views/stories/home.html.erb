@@ -1,7 +1,35 @@
-<p>Landing Page</p>
-<div class='hero'>
-  <div class='w-2/5'>
-    <h3>Learn languages through</h3>
-    <h1></h1>
+<div class="flex mt-2">
+  <div class="basis-2/5 bg-light-blue p-6 mr-2 rounded-3xl">
+    <h3 class="text-[#ACACAC]">Learn languages through</h3>
+    <%= image_tag "context-logo-blue.png", class:"w-48" %>
+    <h3 class="text-black">For children aged 5 to 7 who are learning to read and speak two languages</h3>
+    <%= link_to "Start Reading", stories_path, class: "button" %>
   </div>
-<div class='w-3/5'>
+  <div class="basis-3/5">
+    <%= image_tag "hero.jpg" %>
+  </div>
+</div>
+
+<div class='how-it-works xl:container m-auto'>
+  <h1>How it works</h1>
+  <div class='flex justify-center'>
+    <div class='basis-1/3 m-6'>
+      <%= image_tag "orange-blob.png", class:'w-50 ' %>
+      <h2>1. Browse the library of childrens books</h2>
+    </div>
+    <div class='basis-1/3 m-6'>
+      <%= image_tag "blue-blob.png", class:'w-50 ' %>
+      <h2>2. Select the language and difficulty</h2>
+    </div>
+    <div class='basis-1/3 m-6'>
+      <%= image_tag "pink-blob.png", class:'w-50 ' %>
+      <h2>3. Read along and click on sentences to see the translation</h2>
+    </div>
+  </div>
+</div>
+
+<div class='w-2/3 flex'>
+  <%= image_tag "child-reading.png" %>
+  <h1 class='w-1/2'>Studies show that Context Clues are an effective Vocabulary Learning Technique</h1>
+  <h3><p class='text-blue w-1/2'>What are Context Clues?<p>Context clues are hints found within a sentence, paragraph, or passage that a reader can use to understand the meanings of new or unfamiliar words.</h3>
+</div>
