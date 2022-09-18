@@ -3,9 +3,7 @@
 
   <div data-controller="sentence-loading">
     <%= render "second", story: @story %>
-
-
-    <div class="markers_container flex justify-between">
+    <div class="markers_container flex justify-between mt-6">
       <p><strong>Correct answers:</strong> <span id="counter">0</span><span id="total">/0</span></p>
       <div data-controller="check" id="marker" hidden>
         <button id="correct" data-action="click->check#correct"><%= image_tag "published.png", class:'w-5'%></button>
@@ -14,4 +12,8 @@
     </div>
   </div>
 
+  <div class='mt-12 flex justify-end'>
+    <%= link_to "Read Again",story_path(@story), class:"button bg-teal mr-2" %>
+    <%= link_to "Back to Library", stories_path, class:"button bg-blue" %>
+  </div>
 <% end %>

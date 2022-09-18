@@ -1,22 +1,24 @@
-<div class="flex justify-center">
-  <div class="flex flex-col border-2 border-blue mt-2 md:flex-row md:max-w-2xl rounded-lg bg-white shadow-lg">
-    <%= image_tag "#{@story.photo}", class: "w-full md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" %>
+<div class="flex justify-center mt-4 ">
+  <div class=" flex flex-col border-2 border-blue md:flex-row w-9/12 mt-4 rounded-lg bg-white shadow-lg">
+    <%= image_tag "#{@story.photo}", class: "w-full md:h-auto object-cover md:w-1/2 rounded-t-lg md:rounded-none md:rounded-l-lg" %>
+
     <div class="p-6 flex flex-col justify-start">
-      <h5 class="text-gray-900 text-xl font-medium mb-2"><%= "#{@story.name}" %></h5>
+      <h5 class="text-gray-900 text-xl font-medium mb-4 text-[32px]"><%= "#{@story.name}" %></h5>
       <%= turbo_frame_tag @story do %>
         <div data-controller="sentence-loading">
-          <% story = @story.sentences.first(10) %>
-            <%= render "story", story: @story %>
-          <div class="markers_container flex justify-between ">
+        <% story = @story.sentences.first(10) %>
+          <%= render "story", story: @story %>
+          <div class="markers_container flex justify-between mt-6">
             <p><strong>Correct answers:</strong> <span id="counter">0</span><span id="total">/0</span></p>
             <div data-controller="check" id="marker" hidden>
+              <p>Did you get it correct?</p>
               <button id="correct" data-action="click->check#correct"><%= image_tag "published.png", class:'w-5'%></button>
               <button id="wrong" data-action="click->check#wrong"><%= image_tag "unpublished.png", class:'w-5' %></button>
             </div>
           </div>
         </div>
-        <div data-controller="check">
-          <span data-action="click->check#reset"><%= link_to "Next",story_next_path(@story) %></span>
+        <div data-controller="check" class='mt-12 flex justify-end'>
+          <span data-action="click->check#reset"><%= link_to "Next",story_next_path(@story), class:"button"%></span>
         </div>
       <% end %>
     </div>
