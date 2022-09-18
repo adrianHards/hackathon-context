@@ -4,7 +4,6 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
 
   connect() {
-
     const listNodes = document.querySelectorAll('.sentence')
     const arrayNodes = [...listNodes];
     arrayNodes.reverse
@@ -24,6 +23,5 @@ export default class extends Controller {
         arrayNodes[i].classList.add("ease-in");
       }, 300 * i);
     }
-
   }
 }
