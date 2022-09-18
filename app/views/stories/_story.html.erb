@@ -3,17 +3,18 @@
   <% @story.sentences.each do |sentence| %>
 
     <% if rand(4) == rand(4) %>
-
       <%= turbo_frame_tag sentence do %>
         <%= link_to story_sentence_path(@story, sentence) do %>
-          <span class="text-pink border-2 border-blue rounded-lg">
+          <span class="sentence rounded-lg text-white underline">
             <%= render "sentences/sentence", sentence: sentence.spanish %>
-          <% end %>
           </span>
+        <% end %>
       <% end %>
 
     <% else %>
-      <%= render "sentences/sentence", sentence: sentence.english %>
+      <span class="sentence text-white">
+        <%= render "sentences/sentence", sentence: sentence.english %>
+      </span>
     <% end %>
 
   <% end %>
