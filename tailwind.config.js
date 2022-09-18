@@ -22,6 +22,7 @@ module.exports = {
       backgroundImage: {
           'hero': "url('hero.jpeg')",
           'ruby-rails': "url('rabbit-ruby.jpg')",
+          'child-reading': "url('child-reading.png')",
       }
 
     }
