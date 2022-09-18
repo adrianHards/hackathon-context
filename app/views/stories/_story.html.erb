@@ -3,13 +3,14 @@
 
     <% if rand(2) == rand(2) %>
       <span class="text-pink">
-        <%= sentence.spanish %>
+        <%= render "sentence", sentence: sentence.spanish %>
       </span>
     <% else %>
       <span>
-        <%= sentence.english %>
+        <%= render "sentence", sentence: sentence.english %>
       </span>
     <% end %>
 
   <% end %>
 <% end %>
+
