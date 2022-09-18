@@ -1,16 +1,13 @@
 <% if @story.published == true %>
-  <% @story.sentences.each do |sentence| %>
 
-    <% if rand(2) == rand(2) %>
-      <span class="text-pink">
-        <%= render "sentence", sentence: sentence.spanish %>
-      </span>
-    <% else %>
-      <span>
-        <%= render "sentence", sentence: sentence.english %>
-      </span>
+    <% @story.sentences.each do |sentence| %>
+      <%= turbo_frame_tag sentence do %>
+        <%= link_to story_sentence_path(@story, sentence) do %>
+          <%= render "sentences/spanish", sentence: sentence.spanish %>
+        <% end %>
+      <% end %>
     <% end %>
 
-  <% end %>
 <% end %>
+
 
