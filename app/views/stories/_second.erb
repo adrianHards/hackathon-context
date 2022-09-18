@@ -6,14 +6,14 @@
       <%= turbo_frame_tag sentence do %>
         <%= link_to story_sentence_path(@story, sentence) do %>
           <span data-controller="check" class="text-pink border-2 border-blue rounded-lg">
-            <span class="sentence rounded-lg text-white underline" data-action="click->check#show"><%= render "sentences/sentence", sentence: sentence.spanish %></span>
+            <span class="sentence story-lines rounded-lg text-white underline" data-action="click->check#show"><%= render "sentences/sentence", sentence: sentence.spanish %></span>
         <% end %>
 
           </span>
         <% end %>
 
     <% else %>
-      <span class="sentence text-white">
+      <span class="sentence story-lines text-white">
         <%= render "sentences/sentence", sentence: sentence.english %>
       </span>
     <% end %>
