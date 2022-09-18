@@ -16,6 +16,7 @@ module.exports = {
       'light-pink':'#FF6DCE',
       'grey-font': '#ACACAC',
       'orange': '#FFB800',
+      'white': '#FFF',
     },
   },
   screens: {
