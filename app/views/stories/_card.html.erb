@@ -1,31 +1,65 @@
-<%= link_to "stories/#{story.id}" do %>
-  <div class="rounded-lg shadow hover:shadow-lg">
 
-    <div class="relative">
-      <% if story.published != true %>
-        <%= image_tag "#{story.photo}", class: "rounded-t-lg brightness-75" %>
-      <% else %>
-        <%= image_tag "#{story.photo}", class: "rounded-t-lg" %>
-      <% end %>
+<% if story.published? %>
+  <%= link_to "stories/#{story.id}" do %>
+    <div class="rounded-lg shadow hover:shadow-lg">
 
-      <% if story.published %>
-        <div class="absolute bottom-2 right-2">
-          <%= image_tag "published.png", class: "w-10" %>
-        </div>
-      <% end %>
+      <div class="relative">
+        <% if story.published != true %>
+          <%= image_tag "#{story.photo}", class: "rounded-t-lg brightness-75" %>
+        <% else %>
+          <%= image_tag "#{story.photo}", class: "rounded-t-lg" %>
+        <% end %>
+
+        <% if story.published %>
+          <div class="absolute bottom-2 right-2">
+            <%= image_tag "published.png", class: "w-10" %>
+          </div>
+        <% end %>
+      </div>
+
+      <h5 class="p-4 font-bold text-xl">
+        <%= story.name %>
+      </h5>
+      <p class="pr-4 pl-4">
+        <%= story.summary %>
+      </p>
+
+      <div class="p-4 font-bold text-sm flex justify-between">
+        <span class="mt-2">5+ years of age</span>
+      </div>
+
     </div>
+  <% end %>
+<% else %>
+  <%= link_to "#", data: { turbo_confirm: "Are you sure?" } do %>
+    <div class="rounded-lg shadow hover:shadow-lg">
 
-    <h5 class="p-4 font-bold text-xl">
-      <%= story.name %>
-    </h5>
-    <p class="pr-4 pl-4">
-      <%= story.summary %>
-    </p>
+      <div class="relative">
+        <% if story.published != true %>
+          <%= image_tag "#{story.photo}", class: "rounded-t-lg brightness-75" %>
+        <% else %>
+          <%= image_tag "#{story.photo}", class: "rounded-t-lg" %>
+        <% end %>
 
-    <div class="p-4 font-bold text-sm flex justify-between">
-      <span class="mt-2">5+ years of age</span>
+        <% if story.published %>
+          <div class="absolute bottom-2 right-2">
+            <%= image_tag "published.png", class: "w-10" %>
+          </div>
+        <% end %>
+      </div>
+
+      <h5 class="p-4 font-bold text-xl">
+        <%= story.name %>
+      </h5>
+      <p class="pr-4 pl-4">
+        <%= story.summary %>
+      </p>
+
+      <div class="p-4 font-bold text-sm flex justify-between">
+        <span class="mt-2">5+ years of age</span>
+      </div>
+
     </div>
-
-  </div>
+  <% end %>
 <% end %>
 
