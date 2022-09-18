@@ -3,14 +3,12 @@
 
   <div data-controller="sentence-loading">
     <%= render "second", story: @story %>
-    <div class="markers_container flex justify-center ">
+    <div class="markers_container flex justify-between">
+      <p><strong>Correct answers:</strong> <span id="counter">0</span><span id="total">/0</span></p>
       <div data-controller="check" id="marker" hidden>
         <button id="correct" data-action="click->check#correct"><%= image_tag "published.png", class:'w-5'%></button>
         <button id="wrong" data-action="click->check#wrong"><%= image_tag "unpublished.png", class:'w-5' %></button>
       </div>
-    </div>
-    <div class="flex">
-      <p>Correct answers: <span id="counter">0</span>/19</p>
     </div>
   </div>
 
