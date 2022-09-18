@@ -3,9 +3,14 @@ import { Controller } from "@hotwired/stimulus"
 var markers_counter = 0
 // Connects to data-controller="check"
 export default class extends Controller {
-  // greet() {
-  //   console.log("Hello, Stimulus!", this.element)
-  // }
+  connect() {
+    console.log("Hello, Stimulus!", this.element)
+    const tbf = document.querySelectorAll("turbo-frame").length
+    console.log(tbf)
+    const el = document.querySelector("#total")
+    console.log(el)
+    el.innerHTML = "/" + tbf
+  }
 
   show() {
     const toggle = document.querySelectorAll("#marker")
