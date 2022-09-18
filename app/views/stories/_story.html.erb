@@ -7,12 +7,12 @@
         <%= link_to story_sentence_path(@story, sentence) do %>
 
           <span data-controller="check" class="text-pink border-2 border-blue rounded-lg">
-            <span class="sentence rounded-lg text-white underline" data-action="click->check#show"><%= render "sentences/spanish", sentence: sentence.spanish %></span>
+            <span class="sentence rounded-lg text-white underline" data-action="click->check#show"><%= render "sentences/sentence", sentence: sentence.spanish %></span>
         <% end %>
 
           </span>
         <% end %>
-      <% end %>
+      <%# <% end %>
 
     <% else %>
       <span class="sentence text-white">
@@ -23,4 +23,3 @@
   <% end %>
 
 <% end %>
-
