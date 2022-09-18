@@ -17,8 +17,4 @@ class StoriesController < ApplicationController
     @story = Story.find(params[:id])
   end
 
-  def story_params
-    params.require(:task).permit(:name, :difficulty, :language)
-  end
-
 end
