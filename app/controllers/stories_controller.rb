@@ -12,6 +12,7 @@ class StoriesController < ApplicationController
   end
 
   def next
+    @story = Story.find(params[:story_id])
   end
 
   private
