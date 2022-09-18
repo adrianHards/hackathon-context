@@ -10,7 +10,7 @@
   </div>
 </div>
 
-<div class='how-it-works xl:container m-auto'>
+<div class="how-it-works m-auto">
   <h1>How it works</h1>
   <div class='flex justify-center'>
     <div class='basis-1/3 m-6'>
@@ -28,8 +28,19 @@
   </div>
 </div>
 
-<div class='w-2/3 flex'>
-  <%= image_tag "child-reading.png" %>
-  <h1 class='w-1/2'>Studies show that Context Clues are an effective Vocabulary Learning Technique</h1>
-  <h3><p class='text-blue w-1/2'>What are Context Clues?<p>Context clues are hints found within a sentence, paragraph, or passage that a reader can use to understand the meanings of new or unfamiliar words.</h3>
+<div class="flex m-auto ml-40">
+  <div class="flex">
+    <%= image_tag "child-reading.png" %>
+    <div class="flex-col">
+      <h1 class="w-5/6 -ml-60 my-8">Studies show that Context Clues are an effective Vocabulary Learning Technique</h1>
+      <h3 class="w-5/6 -ml-40 my-8"><p class='text-blue'>What are Context Clues?<p>Context clues are hints found within a sentence, paragraph, or passage that a reader can use to understand the meanings of new or unfamiliar words.</h3>
+      <div class="w-4/5 newsletter bg-teal rounded-3xl px-10 py-6 -ml-20 my-8">
+        <p class="mb-2">Sign up to our newsletter for more about the science behind learning languages, recently added books and feature updates</p>
+        <form class="py-1 bg-white flex justify-between">
+          <input type="email" id="email" name="email" class="" >
+          <input type="submit" value="Sign up" class="button">
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
