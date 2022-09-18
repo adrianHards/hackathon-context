@@ -1,26 +1,21 @@
-<div class="rounded-lg shadow hover:shadow-lg">
+<%= link_to "stories/#{story.id}" do %>
+  <div class="rounded-lg shadow hover:shadow-lg">
 
-  <div>
-    <% if story.published  %>
-      <%= link_to "stories/#{story.id}" do %>
-        <%= image_tag "#{story.photo}", class: "rounded-t-lg" %>
-      <% end %>
-    <% else %>
-      <%= image_tag "#{story.photo}", class: "rounded-t-lg brightness-75" %>
-    <% end %>
+    <div>
+      <%= image_tag "#{story.photo}", class: "rounded-t-lg" %>
+    </div>
+
+      <h5 class="p-4 font-bold text-xl">
+        <%= story.name %>
+      </h5>
+      <p class="pr-4 pl-4">
+        <%= story.summary %>
+      </p>
+
+    <div class="p-4 font-bold text-sm inline-block">
+      <span>5+ years of age</span>
+    </div>
+
   </div>
-
-    <h5 class="p-4 font-bold text-xl">
-      <%= story.name %>
-    </h5>
-    <p class="pr-4 pl-4">
-      <%= story.summary %>
-    </p>
-
-  <div class="p-4 font-bold text-sm inline-block">
-    <span>5+ years of age</span>
-  </div>
-
-</div>
-
+<% end %>
 
