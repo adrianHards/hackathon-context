@@ -14,11 +14,11 @@ export default class extends Controller {
     do {
       task(i);
       i++;
-    } while (i < 19);
+    } while (i < arrayNodes.length - 1);
 
     function task(i) {
       setTimeout(function() {
-        arrayNodes[i].classList.add("text-black");
+        arrayNodes[i].classList.remove("text-white");
         arrayNodes[i].classList.add("transition-colors");
         arrayNodes[i].classList.add("duration-700");
         arrayNodes[i].classList.add("ease-in");
