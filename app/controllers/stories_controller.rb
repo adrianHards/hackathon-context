@@ -20,5 +20,4 @@ class StoriesController < ApplicationController
   def set_story
     @story = Story.find(params[:id])
   end
-
 end
