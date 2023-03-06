@@ -11,14 +11,15 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.1.2
       - name: Install dependencies
         run: |
           gem install bundler
           bundle install
-      - name: Run tests
+      - name: Build and run tests
+        env:
+          DATABASE_URL: postgres://postgres:@localhost:5432/test
+          RAILS_ENV: test
         run: |
-          rails db:create RAILS_ENV=test
-          rails db:migrate RAILS_ENV=test
-          bundle exec rspec
+          bundle exec rails db:create
+          bundle exec rails db:migrate
+          RAILS_ENV=test bundle exec rake
