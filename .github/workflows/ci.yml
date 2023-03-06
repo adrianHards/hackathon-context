@@ -7,22 +7,46 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
-      - name: Setup test database
+
+    services:
+      postgres:
+        image: postgres
         env:
-          RAILS_ENV: test
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Install PostgreSQL client
+        run: |
+          sudo apt-get -yqq install libpq-dev
+
+      - name: Build App
+        env:
           PGHOST: localhost
-          PGUSER: myapp
+          PGUSER: postgres
+          PGPASSWORD: postgres
+          RAILS_ENV: test
         run: |
           bin/rails db:setup
 
-      - name: Run tests
+      - name: Run Tests
+        env:
+          PGHOST: localhost
+          PGUSER: postgres
+          PGPASSWORD: postgres
+          RAILS_ENV: test
         run: |
           bundle exec rspec
