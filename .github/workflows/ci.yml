@@ -18,7 +18,7 @@ jobs:
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
     steps:
       - uses: actions/checkout@v1
-      - uses: ruby/setup-ruby@v1
+      - uses: actions/setup-ruby@v1
         with:
           bundler-cache: true
       - name: Setup Database
@@ -30,14 +30,12 @@ jobs:
           RAILS_ENV: test
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-        - name: Run RSpec
+      - name: Run RSpec
         run: COVERAGE=true bundle exec rspec  --require rails_helper
         env:
           RAILS_ENV: test
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-
-
 # name: Ruby
 
 # on:
@@ -76,19 +74,19 @@ jobs:
 #       - name: Run tests
 #         run: bin/rake
 
-  # lint:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v3
-  #     - name: Install Ruby and gems
-  #       uses: ruby/setup-ruby
-  #       with:
-  #         bundler-cache: true
-  #     # Add or replace any other lints here
-  #     - name: Security audit dependencies
-  #       run: bin/bundler-audit --update
-  #     - name: Security audit application code
-  #       run: bin/brakeman -q -w2
-  #     - name: Lint Ruby files
-  #       run: bin/rubocop --parallel
+# lint:
+#   runs-on: ubuntu-latest
+#   steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v3
+#     - name: Install Ruby and gems
+#       uses: ruby/setup-ruby
+#       with:
+#         bundler-cache: true
+#     # Add or replace any other lints here
+#     - name: Security audit dependencies
+#       run: bin/bundler-audit --update
+#     - name: Security audit application code
+#       run: bin/brakeman -q -w2
+#     - name: Lint Ruby files
+#       run: bin/rubocop --parallel
