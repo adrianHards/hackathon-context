@@ -27,11 +27,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_18_091140) do
   create_table "stories", force: :cascade do |t|
     t.string "name"
     t.boolean "published"
-    t.hstore "spanish"
-    t.hstore "french"
-    t.string "difficulty"
-    t.string "language"
-    t.string "english", array: true
     t.string "photo"
     t.text "summary"
     t.datetime "created_at", null: false
