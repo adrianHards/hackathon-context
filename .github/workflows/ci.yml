@@ -10,8 +10,8 @@ jobs:
     services:
       postgres:
         image: postgres:14
-        # ports:
-        #   - 5432:5432
+        ports:
+          - 5432:5432
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
@@ -34,14 +34,12 @@ jobs:
           RAILS_ENV: test
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-          POSTGRES_PORT: 5432
       - name: Run RSpec
         run: COVERAGE=true bundle exec rspec  --require rails_helper
         env:
           RAILS_ENV: test
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-          POSTGRES_PORT: 5432
 # lint:
 #   runs-on: ubuntu-latest
 #   steps:
