@@ -1,3 +1,9 @@
+<p align="center">
+  <!-- version -->
+  <img src='https://badgen.net/badge/Ruby/v3.1.2/blue' />
+  <img src='https://badgen.net/badge/Rails/v7.0.3.1/blue' />
+</p>
+
 ## About
 This app was developed as part of the [Hotwire](https://hotwired.dev/) themed [Rails Hackathon 2022](https://railshackathon.com/). We used [Hotwire Turbo](https://turbo.hotwired.dev/) on certain pages to negate the need for full-page reloads, for example when turning a page or translating certain sentences from a non-English language into English. 
 
