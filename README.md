@@ -22,7 +22,12 @@ yarn install
 bin/rails db:setup
 bin/dev
 ```
-<br>
+
+## Schema
+
+<div align="center">
+<img src="https://www.datensen.com/blog/wp-content/uploads/2021/10/one-to-many-relationship.png">
+</div>
 
 ## How to use
 ![image](https://user-images.githubusercontent.com/17050237/190924047-077afc85-df28-40d8-883c-c33873a394a7.png)
