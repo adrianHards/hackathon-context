@@ -41,6 +41,8 @@ bin/dev
 ### Single sentence translations and score keeping with Turbo Frames and Stimulus, respectively:
 ![sentence](https://user-images.githubusercontent.com/93719632/192240706-c7fc49ac-cd36-4136-ac1c-5f3523eb15cf.gif)
 
+<!--
 <p align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=adrianHards/hotwire-context" id="counter">
 </p>
+--->
